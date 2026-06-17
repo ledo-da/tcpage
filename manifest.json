@@ -1,0 +1,15 @@
+{
+  "name": "선생님 호출 시스템",
+  "short_name": "쌤호출",
+  "start_url": "./receiver.html",
+  "display": "standalone",
+  "background_color": "#ecf0f1",
+  "theme_color": "#3498db",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3413/3413535.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
