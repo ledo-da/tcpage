@@ -31,7 +31,6 @@ registerBtn.addEventListener('click', () => {
     }
 
     currentTeacherName = name;
-
     const allTeachers = JSON.parse(localStorage.getItem('allTeachersList') || "[]");
     if (!allTeachers.includes(name)) {
         allTeachers.push(name);
@@ -59,7 +58,6 @@ leaveBtn.addEventListener('click', () => {
         let allTeachers = JSON.parse(localStorage.getItem('allTeachersList') || "[]");
         allTeachers = allTeachers.filter(name => name !== currentTeacherName);
         localStorage.setItem('allTeachersList', JSON.stringify(allTeachers));
-        
         sessionStorage.removeItem('currentTabTeacher');
         resetUI();
     }
@@ -71,7 +69,6 @@ function resetUI() {
     document.getElementById('regPw').value = "";
     clearInterval(blinkInterval);
     document.title = "선생님용 시스템";
-    
     alertBox.classList.add('hidden');
     noNotification.classList.remove('hidden');
     mainSection.classList.add('hidden');
