@@ -1,4 +1,4 @@
-const CACHE_NAME = 'teacher-call-v3'; 
+const CACHE_NAME = 'teacher-call-v1';
 const ASSETS = [
   './receiver.html',
   './receiver-style.css',
@@ -6,8 +6,7 @@ const ASSETS = [
   './sender.html',
   './sender-style.css',
   './sender-script.js',
-  './manifest-sender.json',
-  './manifest-receiver.json'
+  './manifest.json'
 ];
 
 self.addEventListener('install', (e) => {
