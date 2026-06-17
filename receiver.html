@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>선생님용 관제 시스템</title>
+    <title>선생님용 시스템</title>
     <link rel="stylesheet" href="receiver-style.css">
-    <link rel="manifest" href="manifest-receiver.json">
+    <link rel="manifest" href="manifest.json">
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./sw.js')
-          .then(() => console.log("선생님용 엔진 등록 성공!"))
+          .then(() => console.log("웹 앱 서비스 워커 등록 성공!"))
           .catch((err) => console.log("등록 실패:", err));
       }
     </script>
 </head>
 <body>
-    <!-- 가입 및 로그인 섹션 -->
     <div id="authSection" class="card">
         <h2>선생님 등록 및 로그인</h2>
         <input type="text" id="regName" placeholder="선생님 성함을 입력하세요">
@@ -23,7 +22,6 @@
         <button id="registerBtn">가입 및 로그인</button>
     </div>
 
-    <!-- 알림 수신함 대시보드 -->
     <div id="mainSection" class="card hidden">
         <div class="dashboard-header">
             <h3 id="welcomeMessage">안녕하세요 선생님</h3>
