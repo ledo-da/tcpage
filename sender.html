@@ -5,30 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>학생 호출 시스템</title>
     <link rel="stylesheet" href="sender-style.css">
-    
-    <!-- [수정 완료] 학생 전용 앱 프로필 연결 -->
-    <link rel="manifest" href="manifest-sender.json">
+    <link rel="manifest" href="manifest.json">
     <script>
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./sw.js')
-          .then(() => console.log("학생용 웹 앱 엔진 등록 성공!"))
-          .catch((err) => console.log("엔진 등록 실패:", err));
+          .then(() => console.log("웹 앱 서비스 워커 등록 성공!"))
+          .catch((err) => console.log("등록 실패:", err));
       }
     </script>
 </head>
 <body>
     <div class="container">
-        <!-- 왼쪽: 선생님 목록 -->
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h3>선생님 목록</h3>
             </div>
             <ul id="teacherList">
-                <!-- 등록된 선생님 목록이 여기에 누적됩니다 -->
-            </ul>
+                </ul>
         </aside>
 
-        <!-- 오른쪽: 호출 화면 -->
         <main class="main-content">
             <h2>선생님 호출하기</h2>
             <div class="status-box">
@@ -39,7 +34,6 @@
             <button id="callBtn" disabled>호출하기</button>
         </main>
     </div>
-
     <script src="sender-script.js"></script>
 </body>
 </html>
